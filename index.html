@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Образовательные тренажёры — Каталог</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                <span class="header__logo-icon">✏️</span>
+                <div>
+                    <h1 class="header__title">Образовательные тренажёры</h1>
+                    <p class="header__subtitle">Интерактивные приложения для начальной школы · 1–5 класс</p>
+                </div>
+            </div>
+            <div class="header__stats">
+                <span class="header__stat" id="stat-total">—</span>
+                <span class="header__stat-label">приложений</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="controls" id="controls">
+        <div class="controls__search">
+            <input type="text" id="search" placeholder="Поиск по названию, тегу, описанию…" autocomplete="off">
+        </div>
+        <div class="controls__filters">
+            <div class="filter-group">
+                <div class="filter-group__label">Категория</div>
+                <div class="chips" id="chips-category"></div>
+            </div>
+            <div class="filter-group">
+                <div class="filter-group__label">Класс</div>
+                <div class="chips" id="chips-grade"></div>
+            </div>
+        </div>
+    </div>
+
+    <main class="grid" id="grid"></main>
+
+    <div class="empty" id="empty" style="display:none">
+        <p>Ничего не найдено 🤷</p>
+        <button class="btn-reset" onclick="resetFilters()">Сбросить фильтры</button>
+    </div>
+
+    <footer class="footer">
+        <p>Все приложения работают прямо в браузере · <a href="https://github.com/Kurale" target="_blank">GitHub</a> · Бесплатно</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
